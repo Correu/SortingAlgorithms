@@ -5,5 +5,6 @@ public class Main {
         InsertionSort iSort = new InsertionSort();
 
         iSort.sort(testArr);
+        iSort.printArray(testArr);
     }
 }

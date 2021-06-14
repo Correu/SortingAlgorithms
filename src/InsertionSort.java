@@ -1,18 +1,27 @@
+/*
+    Insertion sort implementation
+ */
 public class InsertionSort implements SortingAlgorithms {
     @Override
     public void sort(int[] arr) {
+        //looping through each location starting at the second position in the array
         for(int i = 1; i < arr.length; i++) {
             int key = arr[i];
-            int j = 0;
-            while(arr[j] > key && j <=0) {
-                int temp = arr[i];
-                arr[i] = arr[i-1];
-                arr[i-1] = temp;
-                j++;
+            int j = i-1;
+
+            //continuous loop through the remaining locations if they are smaller than the current key
+            while(j >= 0 && arr[j] > key) {
+                arr[j+1] = arr[j];
+                j = j - 1;
             }
+            arr[j+1] = key;
         }
+    }
+
+    //prints the array
+    public void printArray(int[] arr) {
         for(int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i] + " " );
         }
     }
 }
