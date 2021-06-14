@@ -1,3 +1,3 @@
 public interface SortingAlgorithms {
-    void sort();
+    void sort(int[] arr);
 }
