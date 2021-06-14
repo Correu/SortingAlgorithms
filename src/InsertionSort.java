@@ -19,6 +19,7 @@ public class InsertionSort implements SortingAlgorithms {
     }
 
     //prints the array
+    @Override
     public void printArray(int[] arr) {
         for(int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " " );
